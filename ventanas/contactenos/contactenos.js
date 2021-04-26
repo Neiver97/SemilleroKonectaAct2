@@ -1,5 +1,5 @@
 const displayValorAnterior = document.getElementById('anterior');
-const displayValorActual = document.getElementById('actual');
+const displayValorActual = document.getElementById('despues');
 const botonesNumeros = document.querySelectorAll('.numero');
 const botonesOperadores = document.querySelectorAll('.operador');
 

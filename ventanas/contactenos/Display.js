@@ -1,6 +1,5 @@
 
 class Display{
-
     constructor(displayValorAnterior, displayValorActual) {
         this.displayValorActual = displayValorActual;
         this.displayValorAnterior = displayValorAnterior;
@@ -14,6 +13,11 @@ class Display{
             multiplicar: 'x',
             restar: '-', 
         }
+    }
+
+    borrar() {
+        this.valorActual = this.valorActual.toString().slice(0,-1);
+        this.imprimirValores();
     }
 
     borrarTodo() {
@@ -33,7 +37,6 @@ class Display{
 
     agregarNumero(numero) {
         if(numero === '.' && this.valorActual.includes('.')) return
-        this.valorActual=numero
         this.valorActual = this.valorActual.toString() + numero.toString();
         this.imprimirValores();
     }
@@ -50,5 +53,5 @@ class Display{
         if( isNaN(valorActual)  || isNaN(valorAnterior) ) return
         this.valorActual = this.calculador[this.tipoOperacion](valorAnterior, valorActual);
     }
-    
+
 }
